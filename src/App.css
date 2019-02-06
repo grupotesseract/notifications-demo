@@ -2,13 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.bell {
+  animation: shake infinite 10s ease-in-out;
+  animation-direction: alternate;
+  height: 10vmin;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #222;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,13 +24,15 @@
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
+@keyframes shake {
   from {
-    transform: rotate(0deg);
+    transform: rotate(-45deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(45deg);
   }
 }
