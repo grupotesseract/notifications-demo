@@ -3,9 +3,9 @@
 - Registra service worker
 - Realiza _subscription_ do service worker e exibe informações
 - Pede permissão para enviar notificações
+ - Receber via Push API
+ - Exibir _Notification_
 
 ## TODO
- - Exibir _Notification_
- - Receber via Push API
  - Listar notificações recebidas via Push API
 
