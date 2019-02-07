@@ -66,10 +66,16 @@ class App extends Component {
     });
   }
 
+
   subscribe = () => {
+    const isNull = (param) => param === null;
     let sw  = this.state.sw;
     console.log('sw', sw)
     let swReg = sw.registration;
+
+    if (isNull(sw.registration)) {
+      return;
+    }
 
     const vapidPublicKey = 'BIJm2e5LVBfLbpLF6XLI92izLqbStL+UbRBFq99XUZ4R4OLqL/2B4wZEe7rHuARapjRVphbxQxyVta0Azo/2dKA=';
 
@@ -89,7 +95,6 @@ class App extends Component {
       this.registerOnPush(swReg);
     });
 
-    
   }
 
   registerOnPush = (swReg) => {
